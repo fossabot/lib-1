@@ -3,5 +3,28 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "scllib": {
+      "projectType": "library",
+      "root": "projects/scllib",
+      "sourceRoot": "projects/scllib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/scllib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/scllib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/scllib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    }
   }
 }
