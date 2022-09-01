@@ -1,2 +1,2 @@
 # lib
-generate library for IEC 81850 standard
+generate library for IEC 61850 standard
