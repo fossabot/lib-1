@@ -2,9 +2,23 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "declarationMap": false
+    "declarationMap": false,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node"
+    ],
+    "module": "es2015",
+    "paths": {
+      "@Model/*": ["src/lib/xmlns/*"]
+    }
   },
   "angularCompilerOptions": {
-    "compilationMode": "partial"
-  }
+    "compilationMode": "partial",
+    "annotateForClosureCompiler": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true
+  },
 }

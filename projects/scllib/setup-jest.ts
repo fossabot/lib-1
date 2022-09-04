@@ -2,8 +2,4 @@
 //
 // SPDX-License-Identifier: MIT license
 
-/*
- * Public API Surface of scl-lib
- */
-export * from './lib/scllib.service';
-export * from './lib/xmlns/SCL';
+import 'jest-preset-angular/setup-jest.mjs';
