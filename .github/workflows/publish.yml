@@ -13,9 +13,10 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies and build 🔧
-        run: |
-          npm install && npm install -g @angular/cli && npm run build-lib
+      - name: Install dependencies 🔧
+        run: npm install
+      - name: Build 🔧
+        run: npm run build-lib
       - name: Publish package on NPM 📦
         run: |
           cd dist/scllib
