@@ -36,6 +36,10 @@ jobs:
       - name: Install global dependencies 🔧
         run: npm ci
       - name: Install Lib dependencies an Build 🔧
+        run: |
+          cd projects/scllib 
+          npm ci
+      - name: Build 🔖 
         run: npm run build-lib
       - name: Publish package on NPM 📦
         run: |
