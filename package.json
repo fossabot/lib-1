@@ -1,6 +1,6 @@
 {
   "name": "lib-opentemplate",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Samir Romdhani",
   "license": "MIT",
   "homepage": "https://github.com/romdhanisam/lib#readme",
@@ -57,7 +57,7 @@
     "@angular-eslint/template-parser": "14.0.3",
     "@angular/cli": "~14.1.3",
     "@angular/compiler-cli": "^14.1.0",
-    "@opentemp/jsonix": "^3.0.0",
+    "@opentempl/jsonix": "^3.0.0-issues-238",
     "@types/estree": "^1.0.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^18.7.14",
