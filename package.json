@@ -1,8 +1,11 @@
 {
   "name": "lib-opentemplate",
-  "version": "0.1.19",
-  "author": "Samir Romdhani",
+  "version": "0.1.20",
   "license": "MIT",
+  "author": {
+    "name": "Samir Romdhani",
+    "email": "samir.romdhani1994@gmail.com"
+  },	
   "homepage": "https://github.com/romdhanisam/lib#readme",
   "scripts": {
     "ng": "ng",
