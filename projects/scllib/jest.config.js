@@ -29,7 +29,7 @@ module.exports = {
     "<rootDir>/src/lib"
   ],
   moduleDirectories: [
-    "<rootDir>/node_modules",
+    "node_modules",
   ],
   collectCoverage: true,
   coverageDirectory: './../../dist/coverage',
