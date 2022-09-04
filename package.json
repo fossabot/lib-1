@@ -1,6 +1,6 @@
 {
   "name": "lib-opentemplate",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "license": "MIT",
   "author": {
     "name": "Samir Romdhani",
@@ -36,6 +36,9 @@
   ],
   "bugs": {
     "url": "https://github.com/romdhanisam/lib/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
     "@angular/animations": "^14.1.0",

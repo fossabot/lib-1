@@ -1,6 +1,6 @@
 {
   "name": "@opentempl/scl-lib",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "description": "Library for IEC 61850 standard",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "IEC61850"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   },
   "peerDependencies": {
     "@angular/common": "^14.1.0",
