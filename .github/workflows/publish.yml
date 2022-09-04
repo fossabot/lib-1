@@ -22,7 +22,9 @@ jobs:
         run: |
             cd projects/scllib
             npm cache clean --force
-            rm package-lock.json && npm install && npm install -g @angular/cli && ng config -g cli.warnings.versionMismatch false
+            npm install
+            npm install -g @angular/cli > /dev/null
+            ng config -g cli.warnings.versionMismatch false
             npm run build-lib
       - name: Publish package on NPM 📦
         run: |
