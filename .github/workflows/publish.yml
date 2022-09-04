@@ -22,11 +22,11 @@ jobs:
         run: |
             cd projects/scllib
             npm cache clean --force
-            rm package-lock.json && npm install
+            rm package-lock.json && npm install && npm install -g @angular/cli
             npm run build-lib
       - name: Publish package on NPM 📦
         run: |
-          cd dist/scllib
+          cd dist/scllib 
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
