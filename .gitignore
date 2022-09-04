@@ -17,11 +17,15 @@
 /node_modules
 node_modules/*
 
+/projects/scllib/node_modules
+projects/scllib/node_modules/*
+
 # profiling files
 chrome-profiler-events*.json
 
 # IDEs and editors
 /.idea
+.idea
 .project
 .classpath
 .c9/
