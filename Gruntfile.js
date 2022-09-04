@@ -6,8 +6,6 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-bump');
-  grunt.loadNpmTasks('grunt-prompt');
-  grunt.loadNpmTasks('grunt-curl');
   
   grunt.initConfig({
 
@@ -64,12 +62,12 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('bump-patch', ['prompt:patch', 'bump:patch']);
-  grunt.registerTask('bump-minor', ['prompt:minor', 'bump:minor']);
-  grunt.registerTask('bump-major', ['prompt:major', 'bump:major']);
+  // grunt.registerTask('bump-patch', ['prompt:patch', 'bump:patch']);
+  // grunt.registerTask('bump-minor', ['prompt:minor', 'bump:minor']);
+  // grunt.registerTask('bump-major', ['prompt:major', 'bump:major']);
   grunt.registerTask('patch', ['bump:patch']);
   grunt.registerTask('minor', ['bump:minor']);
   grunt.registerTask('major', ['bump:major']);
-  grunt.registerTask('whatthecommit', ['curl_whathecommit']);
-  grunt.registerTask('commit', ['prompt:commit', 'bump']);
+  // grunt.registerTask('whatthecommit', ['curl_whathecommit']);
+  // grunt.registerTask('commit', ['prompt:commit', 'bump']);
 }
