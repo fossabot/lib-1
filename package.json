@@ -1,6 +1,6 @@
 {
   "name": "lib-opentemplate",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Samir Romdhani",
   "license": "MIT",
   "homepage": "https://github.com/romdhanisam/lib#readme",
@@ -8,6 +8,8 @@
     "ng": "ng",
     "build": "ng build",
     "lint": "ng lint",
+    "build-lib": "ng build --project scllib --configuration production",
+    "package-lib": "ng-packagr -p ng-package.json",
     "patch": "grunt patch",
     "minor": "grunt minor",
     "major": "grunt major",

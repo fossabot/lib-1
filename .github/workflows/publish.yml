@@ -15,11 +15,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
         run: |
-          cd ./projects/scllib
-          npm install && npm install -g @angular/cli && npm run build
+          npm install && npm install -g @angular/cli && npm run build-lib
       - name: Publish package on NPM 📦
         run: |
-          cd ../../dist/scllib
+          cd dist/scllib
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
