@@ -11,20 +11,19 @@ jobs:
         with:
           persist-credentials: false
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14.x'
+          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
       - name: Install global dependencies 🔧
         run: rm package-lock.json && npm install
-      - name: Install Lib dependencies 🔧
+      - name: Install Lib dependencies an Build 🔧
         run: |
-          cd projects/scllib
-          rm package-lock.json && npm install
-      - name: Build 🔧
-        run: |
-          pwd
-          npm run build-lib
+            cd projects/scllib
+            npm cache clean --force
+            rm package-lock.json && npm install
+            npm run build-lib
       - name: Publish package on NPM 📦
         run: |
           cd dist/scllib
