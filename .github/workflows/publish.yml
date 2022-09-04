@@ -20,9 +20,6 @@ jobs:
         run: rm package-lock.json && npm install
       - name: Install Lib dependencies an Build 🔧
         run: |
-            cd projects/scllib
-            npm cache clean --force
-            npm install
             npm install -g @angular/cli > /dev/null
             ng config -g cli.warnings.versionMismatch false
             npm run build-lib
