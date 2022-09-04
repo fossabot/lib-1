@@ -1,6 +1,6 @@
 {
   "name": "@opentempl/scl-lib",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Library for IEC 61850 standard",
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "ts-jest": "^28.0.8"
   },
   "scripts": {
+    "ng": "ng",
     "build-dev": "ng build --configuration development --watch",
     "build": "ng build --project scllib --configuration production",
     "package": "ng-packagr -p ng-package.json",
