@@ -49,3 +49,8 @@ jobs:
         run: |
           cd projects/scllib 
           npm run test
+      - name: Cleanup & Upload Coverage
+        shell: bash
+        run: |
+          rm -rf .tmp
+          bash <(curl -s https://codecov.io/bash) -c -K || echo "Codecov upload failed"
