@@ -6,6 +6,7 @@ import { TestBed } from '@angular/core/testing';
 import { _SCLType } from '@Model/SCL';
 import { ScllibService } from './scllib.service';
 import * as ServiceAccount from '../tests/mappings/SA.js';
+import { concatAll, of } from 'rxjs';
 
 describe('ScllibService', () => {
   let service: ScllibService;
@@ -124,7 +125,7 @@ describe('ScllibService', () => {
   });
 
   describe('ScllibService - Services', () => {
-    const scllibService: ScllibService= new ScllibService();
+    let scllibService: ScllibService = new ScllibService();;
     beforeEach(() => {
       scllibService.setContext(ServiceAccount.SA, namespaces);
     });
@@ -186,8 +187,37 @@ describe('ScllibService', () => {
       })
     }));
 
-    // TODO
-    it('unmarshalURL test', () => {
-    });
+    it('unmarshalURL test', ((done) => {
+      let testFile1 = `https://raw.githubusercontent.com/romdhanisam/lib/feat/scl-lib/projects/scllib/src/tests/files/samples/test1.xml`;
+      let testFile2 = `https://raw.githubusercontent.com/romdhanisam/lib/feat/scl-lib/projects/scllib/src/tests/files/samples/test2.xml`;
+      let testFile3 = `https://raw.githubusercontent.com/romdhanisam/lib/feat/scl-lib/projects/scllib/src/tests/files/samples/test3.xml`;
+      const expected: any = {
+        "TYPE_NAME": "SA.SCL",
+        release: 4,
+        revision: 'B',
+        version: '2007',
+        header: {
+          "TYPE_NAME": "SA.THeader",
+          id: "ae390399-221c-497f-b03b-85e7edfd90df",
+          version: "1.0",
+          revision: "2.0",
+          toolID: "openTemplate",
+        },
+        otherAttributes: {
+          release: '4',
+          revision: 'B',
+          version: '2007',
+          "xmlns": "http://www.iec.ch/61850/2003/SCL",
+         "xmlns:xs": "http://www.w3.org/2001/XMLSchema"
+        }
+      };
+     const source = of(scllibService.unmarshalURL(testFile1),
+     scllibService.unmarshalURL(testFile2),
+     scllibService.unmarshalURL(testFile3));
+     const subscribe = source.pipe(concatAll()).subscribe(res => {
+      expect(res).toEqual({SCL: expected});
+      done();
+     });
+    }));
   });
 });
