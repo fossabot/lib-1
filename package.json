@@ -13,6 +13,7 @@
     "lint": "ng lint",
     "build-lib": "ng build --project scllib --configuration production",
     "package-lib": "ng-packagr -p projects/scllib/ng-package.json",
+    "test": "cd projects/scllib && npx jest --no-cache --coverage -c jest.config.js",
     "patch": "grunt patch",
     "minor": "grunt minor",
     "major": "grunt major",
