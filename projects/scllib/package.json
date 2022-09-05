@@ -31,7 +31,6 @@
     "@angular/core": "^14.1.0"
   },
   "dependencies": {
-    "node-fetch": "^3.2.10",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
