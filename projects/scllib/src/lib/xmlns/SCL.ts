@@ -16,8 +16,8 @@ import * as Primitive from './xml-primitives';
 
 
 export interface BaseType {
-	_exists: boolean;
-	_namespace: string;
+	TYPE_NAME?: string;
+	otherAttributes?: any
 }
 export interface _LN0Type extends _tLN0 {}
 export interface LN0Type extends _LN0Type { constructor: { new(): LN0Type }; }
