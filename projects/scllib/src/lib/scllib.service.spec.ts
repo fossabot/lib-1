@@ -179,9 +179,9 @@ describe('ScllibService', () => {
     });
 
     it('unmarshalURL should be created', () => {
-      const testFile1 = `https://raw.githubusercontent.com/romdhanisam/lib/main/projects/scllib/src/tests/files/samples/test1.xml`;
-      const testFile2 = `https://raw.githubusercontent.com/romdhanisam/lib/main/projects/scllib/src/tests/files/samples/test2.xml`;
-      const testFile3 = `https://raw.githubusercontent.com/romdhanisam/lib/main/projects/scllib/src/tests/files/samples/test3.xml`;
+      const testFile1 = `https://raw.githubusercontent.com/romdhanisam/lib/v0.1.25/projects/scllib/src/tests/files/samples/test1.xml`;
+      const testFile2 = `https://raw.githubusercontent.com/romdhanisam/lib/v0.1.25/projects/scllib/src/tests/files/samples/test2.xml`;
+      const testFile3 = `https://raw.githubusercontent.com/romdhanisam/lib/v0.1.25/projects/scllib/src/tests/files/samples/test3.xml`;
       const expected: any = {
         "TYPE_NAME": "SA.SCL",
         release: 4,
